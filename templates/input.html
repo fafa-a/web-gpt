@@ -1,0 +1,25 @@
+<form hx-post="/api/submit" hx-target="#output" hx-swap="innerHTML">
+  <label for="query" text="sm"> Query: </label>
+  <div flex="~ inline row" space="x-2">
+    <input
+      type="text"
+      name="query"
+      id="query"
+      placeholder="Type something"
+      border="~ 2 rounded-md"
+      p="2"
+    />
+    <button
+      type="submit"
+      border="~ 2 rounded-md blue-600"
+      p="x-2.5 y-1.5"
+      text="sm white"
+      bg="blue-600 hover:blue-500"
+      font="semibold"
+    >
+      Add
+    </button>
+  </div>
+</form>
+
+<div id="output"></div>

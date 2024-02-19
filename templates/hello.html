@@ -1,0 +1,23 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block content %}
+<div flex="~ inline row " space="x-2" p="x-8 y-4">
+  <p m="1" text="red-500 2xl">Howdy!</p>
+  <a href="/another-page" text="blue-500 hover:blue-300">Another page</a>
+  <button
+    type="button"
+    hx-get="/api/hello"
+    hx-swap="innerHtml"
+    border="~ 2 rounded-md blue-600"
+    p="x-2.5 y-1.5"
+    text="sm white"
+    bg="blue-600 hover:blue-500"
+    font="semibold"
+  >
+    Say hello
+  </button>
+</div>
+{% include "input.html" %} {% endblock %}
